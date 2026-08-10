@@ -32,6 +32,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
+          timeout: 120000
           # A weboldal célmappája a tárhelyen. SiteGroundon jellemzően:
           #   public_html/            (fő domain gyökere)
           #   public_html/almappa/    (aldomain / almappa)
