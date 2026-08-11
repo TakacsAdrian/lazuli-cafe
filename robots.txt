@@ -1,4 +1,54 @@
+# ==============================================
+# robots.txt — https://cafe.lazuli.hu
+# ==============================================
+
 User-agent: *
 Allow: /
+
+# ==============================================
+# AI keresők — ENGEDÉLYEZVE
+# ----------------------------------------------
+# Az alábbi botok SZÁNDÉKOSAN nincsenek felsorolva,
+# így a fenti "User-agent: *" szabály vonatkozik
+# rájuk, azaz olvashatják az oldalt és az llms.txt-t:
+#
+#   OAI-SearchBot     (ChatGPT keresés)
+#   ChatGPT-User      (user által kért oldalletöltés)
+#   Claude-User       (Claude user-kérés)
+#   Claude-SearchBot  (Claude keresés)
+#   PerplexityBot     (Perplexity keresés)
+#
+# FONTOS: ne adj nekik külön "User-agent" blokkot,
+# mert az felülírná a fenti * szabályt.
+# ==============================================
+
+# ==============================================
+# AI tanító crawlerek — TILTVA
+# ==============================================
+
+User-agent: GPTBot
+User-agent: CCBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: Bytespider
+User-agent: Amazonbot
+Disallow: /
+
+# ==============================================
+# SEO / agresszív crawlerek — TILTVA
+# ==============================================
+
+User-agent: SemrushBot
+User-agent: SemrushBot-SA
+User-agent: AhrefsBot
+User-agent: MJ12bot
+User-agent: DotBot
+User-agent: PetalBot
+Disallow: /
+
+# ==============================================
 
 Sitemap: https://cafe.lazuli.hu/sitemap.xml
